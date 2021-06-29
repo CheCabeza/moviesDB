@@ -1,10 +1,12 @@
 import actionTypes from '../actions/actionTypes';
 
-function moviesReducer(moviesList = {}, action: object | any) {
-  if (action.type === actionTypes.LOAD_MOVIES) {
-    return action.movies;
+function moviesReducer(movies : any = {}, action: any) {
+  switch (action.type) {
+    case actionTypes.LOAD_MOVIES:
+      return action.movies;
+    default:
+      return movies;
   }
-  return moviesList;
 }
 
 export default moviesReducer;
