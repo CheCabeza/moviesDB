@@ -24,7 +24,7 @@ export function loadTv() {
       const { data } = await axios('https://api.themoviedb.org/3/trending/tv/week?api_key=fd4391ab9e4ed087a42c2c2e4329b1d4');
       dispatch({
         type: actionTypes.LOAD_TVSHOWS,
-        tvShowsList: data,
+        tvShows: data,
       });
     } catch (error) {
       dispatch({
