@@ -11,16 +11,16 @@ function MoviesList({ dispatch, moviesList } : any) {
   return (
     <div className="movie_container">
       {
-      moviesList.results.map((element:any) => (
-        <div className="movieBox">
-          <img src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} alt={element.title} />
-          <div className="movieBox__info">
-            <p>{element.title}</p>
-            <p>{element.vote_average}</p>
-          </div>
+    moviesList.results.map((element:any) => (
+      <div className="movieBox">
+        <img src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} alt={element.title} />
+        <div className="movieBox__info">
+          <p>{element.title}</p>
+          <p>{element.vote_average}</p>
         </div>
-      ))
-    }
+      </div>
+    ))
+  }
     </div>
 
   // <h1>{JSON.stringify(moviesList.results)}</h1>
