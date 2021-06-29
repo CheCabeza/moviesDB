@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import loadMovies from '../../redux/actions/actionCreator';
+import { loadMovies } from '../../redux/actions/actionCreator';
 import './moviesList.scss';
 
 function MoviesList({ dispatch, moviesList } : any) {

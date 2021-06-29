@@ -15,7 +15,7 @@ export default function Header() {
         <Link to="/">
           <ImFilm size="3em" className={movieIconColor} onClick={() => { setMovieIconColor('movieIconSelected'); setTvIconColor('tvIcon'); }} />
         </Link>
-        <Link to="/tvshow">
+        <Link to="/tvshows">
           <ImTv size="3em" className={tvIconColor} onClick={() => { setTvIconColor('tvIconSelected'); setMovieIconColor('movieIcon'); }} />
         </Link>
       </div>

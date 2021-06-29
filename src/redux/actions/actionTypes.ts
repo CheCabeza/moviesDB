@@ -1,3 +1,4 @@
 export default {
   LOAD_MOVIES: 'LOAD_MOVIES',
+  LOAD_TVSHOWS: 'LOAD_TVSHOWS',
 };
