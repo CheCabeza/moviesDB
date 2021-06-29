@@ -14,7 +14,7 @@ function App() {
           <BrowserRouter>
             <Header />
             <Switch>
-              <Route path="/movies" exact component={MoviesList} />
+              <Route path="/" exact component={MoviesList} />
             </Switch>
           </BrowserRouter>
         </Provider>
