@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadMovies } from '../../redux/actions/actionCreator';
-import MoviesModal from '../moviesModal/MoviesModal';
+import MoviesModal from '../moviesModal/Modal';
 import './moviesList.scss';
 
 function MoviesList() {
@@ -31,7 +31,7 @@ function MoviesList() {
   }
       </div>
 
-      <MoviesModal open={isOpen} onClose={() => setIsOpen(false)} movieId={movieID} />
+      <MoviesModal open={isOpen} onClose={() => setIsOpen(false)} movieId={movieID} type="movie" />
     </>
   );
 }

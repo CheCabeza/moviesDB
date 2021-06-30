@@ -1,24 +1,25 @@
-/* eslint-disable no-param-reassign */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RiCloseCircleFill } from 'react-icons/ri';
 import { loadMovieDetails, loadSimilarMovies } from '../../redux/actions/actionCreator';
-import './MoviesModal.scss';
+import './Modal.scss';
 
-export default function MovieModal({ open, onClose, movieId }: any) {
+export default function MovieModal({
+  open, onClose, movieId, type,
+}: any) {
   const movieDetails = useSelector((store: any) => store.movieDetails);
   const similarMovies = useSelector((store: any) => store.similarMoviesList.results);
   const dispatch = useDispatch();
   const [movieID, setMovieID] = useState(movieId);
 
   useEffect(() => {
-    dispatch(loadMovieDetails(movieID));
-    dispatch(loadSimilarMovies(movieID));
+    dispatch(loadMovieDetails(movieID, type));
+    dispatch(loadSimilarMovies(movieID, type));
   }, [movieID]);
 
   useEffect(() => {
-    dispatch(loadMovieDetails(movieId));
-    dispatch(loadSimilarMovies(movieId));
+    dispatch(loadMovieDetails(movieId, type));
+    dispatch(loadSimilarMovies(movieId, type));
   }, [movieId]);
 
   if (!open) return null;
@@ -31,14 +32,16 @@ export default function MovieModal({ open, onClose, movieId }: any) {
         <div className="MovieModal__movie-details-section">
           <img src={`https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path}`} alt={movieDetails.title} />
           <div className="movie-details-section__movie-details-info">
-            <h1>{movieDetails.title}</h1>
+            {
+              movieDetails.title ? (<h1>{movieDetails.title}</h1>) : <h1>{movieDetails.name}</h1>
+            }
+
             <p>{movieDetails.overview}</p>
           </div>
         </div>
 
         <p>Similar Movies:</p>
         <div className="MovieModal__SimilarMovies">
-          {/* <p>{JSON.stringify(similarMovies)}</p> */}
           {
             similarMovies && similarMovies.slice(0, 6).map((element:any) => (
               <div className="similarMoviesBox">
