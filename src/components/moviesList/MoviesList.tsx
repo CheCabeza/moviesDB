@@ -6,12 +6,12 @@ import './moviesList.scss';
 function MoviesList({ dispatch, moviesList } : any) {
   useEffect(() => {
     dispatch(loadMovies());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="movie_container">
       {
-    moviesList.results.map((element:any) => (
+    moviesList.results && moviesList.results.map((element:any) => (
       <div className="movieBox">
         <img src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} alt={element.title} />
         <div className="movieBox__info">
@@ -23,7 +23,6 @@ function MoviesList({ dispatch, moviesList } : any) {
   }
     </div>
 
-  // <h1>{JSON.stringify(moviesList.results)}</h1>
   );
 }
 
