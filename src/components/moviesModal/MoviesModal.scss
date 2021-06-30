@@ -1,0 +1,104 @@
+@import '../../styles/colors';
+@import '../../styles/generalStyles.scss';
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.MovieModal {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+    background-color: $yellow;
+    padding: 50px;
+    z-index: 1000;
+    
+    &__SimilarMovies {
+        margin: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    &__close-button {
+        transform:  rotate(40 deg);
+        border:none;
+        background-color:transparent;
+        outline:none;
+        font-size:40px;
+        position: absolute;
+        top: 15px;
+        right: 40px;
+    }
+    &__movie-details-section{
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 20px;
+        background-color: $blue;
+        box-shadow: $shadow;
+
+        img {
+            border-radius: 20px 0px 0px 20px;
+            width: 30vw;
+            height: auto;
+        }
+        .movie-details-section__movie-details-info {
+            padding: 50px;
+        }
+        p {
+            margin: 20px;
+        }
+    }
+}
+
+.similarMoviesBox {
+    width: 8vw;
+    height: fit-content;
+    margin: 20px;
+    
+    img {
+        border-radius: 20px;
+        width: 8vw;
+        height: 12vw;
+        box-shadow: $shadow;
+
+
+    }
+    button {
+        transform:  rotate(40 deg);
+        border:none;
+        background-color:transparent;
+        outline:none;
+    }
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        p {
+            margin: 10px;
+
+        }
+    }
+    :hover {
+        cursor: pointer;
+    }
+
+}

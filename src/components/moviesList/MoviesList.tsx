@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadMovies } from '../../redux/actions/actionCreator';
-import MoviesModal from '../modal/MoviesModal';
+import MoviesModal from '../moviesModal/MoviesModal';
 import './moviesList.scss';
 
 function MoviesList() {

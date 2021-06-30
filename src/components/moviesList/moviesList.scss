@@ -1,4 +1,6 @@
 @import '../../styles/colors';
+@import '../../styles/generalStyles.scss';
+
 
 *, *::after, *::before {
     margin: 0;
@@ -18,11 +20,20 @@
 .movieBox {
     width: 16vw;
     height: fit-content;
-    border: 1px solid  black;
     margin: 20px;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    background-color: $yellow;
+
+    button {
+        border:none;
+        background-color:transparent;
+        outline:none;
+    }
     img {
         width: 16vw;
         height: 25vw;
+        border-radius: 20px 20px 0px 0px;
     }
     &__info {
         display: flex;
