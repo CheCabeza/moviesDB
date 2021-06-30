@@ -6,7 +6,7 @@ import './moviesList.scss';
 
 function MoviesList() {
   const [isOpen, setIsOpen] = useState(false);
-  const [movieID, setMovieId] = useState('337404');
+  const [movieID, setMovieId] = useState(null);
   const movies = useSelector((store: any) => store.moviesList.results);
   const dispatch = useDispatch();
   useEffect(() => {

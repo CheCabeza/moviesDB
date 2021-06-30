@@ -34,6 +34,22 @@ export function loadMovieDetails(movieId: string) {
   };
 }
 
+export function loadSimilarMovies(movieId: string) {
+  return async (dispatch: Dispatch) => {
+    try {
+      const { data } = await axios(`https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`);
+      dispatch({
+        type: actionTypes.LOAD_SIMILARMOVIES,
+        similarMovies: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: 'LOAD_SIMILARMOVIES_ERROR',
+      });
+    }
+  };
+}
+
 export function loadTv() {
   return async (dispatch: Dispatch) => {
     try {
