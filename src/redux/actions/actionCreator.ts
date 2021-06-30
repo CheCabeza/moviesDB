@@ -18,6 +18,22 @@ export function loadMovies() {
   };
 }
 
+export function loadMovieDetails(movieId: string) {
+  return async (dispatch: Dispatch) => {
+    try {
+      const { data } = await axios(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
+      dispatch({
+        type: actionTypes.LOAD_MOVIEDETAILS,
+        movie: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: 'LOAD_MOVIEDETAILS_ERROR',
+      });
+    }
+  };
+}
+
 export function loadTv() {
   return async (dispatch: Dispatch) => {
     try {
