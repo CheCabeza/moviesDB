@@ -11,4 +11,6 @@ const rootReducer = combineReducers({
   tvShowsList: tvShowsReducer,
 });
 
+export type AppState = ReturnType<typeof rootReducer>
+
 export default rootReducer;
