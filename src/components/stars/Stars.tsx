@@ -14,7 +14,7 @@ export default function Stars({ votes }: any) {
     );
     case 1 || 2: return (
       <>
-        <AiFillStar className="info__stars--golden" />
+        <AiFillStar />
         <AiOutlineStar />
         <AiOutlineStar />
         <AiOutlineStar />
@@ -23,8 +23,8 @@ export default function Stars({ votes }: any) {
     );
     case 3 || 4: return (
       <>
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
+        <AiFillStar />
+        <AiFillStar />
         <AiOutlineStar />
         <AiOutlineStar />
         <AiOutlineStar />
@@ -32,38 +32,38 @@ export default function Stars({ votes }: any) {
     );
     case 5 || 6: return (
       <>
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
         <AiOutlineStar />
         <AiOutlineStar />
       </>
     );
     case 7: return (
       <>
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
         <AiOutlineStar />
       </>
     );
     case 8: return (
       <>
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
         <AiOutlineStar />
       </>
     );
     case 9 || 10: return (
       <>
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
-        <AiFillStar className="info__stars--golden" />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
       </>
     );
     default: return <p>{votes}</p>;

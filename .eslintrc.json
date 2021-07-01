@@ -24,7 +24,7 @@
         "camelcase": "off",
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts", "scss"] }],
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts", "scss", ".js", ".jsx"] }],
         "import/extensions": "off"
     },
     "settings": {
