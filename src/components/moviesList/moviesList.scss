@@ -38,7 +38,7 @@
     }
     &__info {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         p {
@@ -46,5 +46,17 @@
 
         }
     }
-
+    
+}
+.info__stars{
+    color:$golden;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    p {
+        color: black;
+    }
 }
