@@ -1,6 +1,7 @@
+import { AnyAction } from 'redux';
 import actionTypes from '../actions/actionTypes';
 
-function moviesReducer(movies : any = {}, action: any) {
+function moviesReducer(movies = {}, action: AnyAction) {
   switch (action.type) {
     case actionTypes.LOAD_MOVIES:
       return action.movies;

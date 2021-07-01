@@ -1,6 +1,7 @@
+import { AnyAction } from 'redux';
 import actionTypes from '../actions/actionTypes';
 
-function tvShowsReducer(tvShows : any = {}, action: any) {
+function tvShowsReducer(tvShows = {}, action: AnyAction) {
   switch (action.type) {
     case actionTypes.LOAD_TVSHOWS:
       return action.tvShows;
