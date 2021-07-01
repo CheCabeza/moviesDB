@@ -28,7 +28,7 @@ export function loadDetails(movieId: string, type: string) {
       });
     } catch (error) {
       dispatch({
-        type: 'LOAD_MOVIEDETAILS_ERROR',
+        type: 'LOAD_DETAILS_ERROR',
       });
     }
   };
