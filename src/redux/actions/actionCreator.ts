@@ -18,13 +18,13 @@ export function loadMovies() {
   };
 }
 
-export function loadMovieDetails(movieId: string, type: string) {
+export function loadDetails(movieId: string, type: string) {
   return async (dispatch: Dispatch) => {
     try {
       const { data } = await axios(`https://api.themoviedb.org/3/${type}/${movieId}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
       dispatch({
-        type: actionTypes.LOAD_MOVIEDETAILS,
-        movie: data,
+        type: actionTypes.LOAD_DETAILS,
+        details: data,
       });
     } catch (error) {
       dispatch({
@@ -34,17 +34,17 @@ export function loadMovieDetails(movieId: string, type: string) {
   };
 }
 
-export function loadSimilarMovies(movieId: string, type: string) {
+export function loadSimilar(movieId: string, type: string) {
   return async (dispatch: Dispatch) => {
     try {
       const { data } = await axios(`https://api.themoviedb.org/3/${type}/${movieId}/similar?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`);
       dispatch({
-        type: actionTypes.LOAD_SIMILARMOVIES,
-        similarMovies: data,
+        type: actionTypes.LOAD_SIMILAR,
+        similar: data,
       });
     } catch (error) {
       dispatch({
-        type: 'LOAD_SIMILARMOVIES_ERROR',
+        type: 'LOAD_SIMILAR_ERROR',
       });
     }
   };

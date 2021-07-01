@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RiCloseCircleFill } from 'react-icons/ri';
-import { loadMovieDetails, loadSimilarMovies } from '../../redux/actions/actionCreator';
+import { loadDetails, loadSimilar } from '../../redux/actions/actionCreator';
 import './Modal.scss';
 
 export default function MovieModal({
   open, onClose, movieId, type,
 }: any) {
-  const movieDetails = useSelector((store: any) => store.movieDetails);
-  const similarMovies = useSelector((store: any) => store.similarMoviesList.results);
+  const details = useSelector((store: any) => store.details);
+  const similarMovies = useSelector((store: any) => store.similar.results);
   const dispatch = useDispatch();
   const [movieID, setMovieID] = useState(movieId);
 
   useEffect(() => {
-    dispatch(loadMovieDetails(movieID, type));
-    dispatch(loadSimilarMovies(movieID, type));
+    dispatch(loadDetails(movieID, type));
+    dispatch(loadSimilar(movieID, type));
   }, [movieID]);
 
   useEffect(() => {
-    dispatch(loadMovieDetails(movieId, type));
-    dispatch(loadSimilarMovies(movieId, type));
+    dispatch(loadDetails(movieId, type));
+    dispatch(loadSimilar(movieId, type));
   }, [movieId]);
 
   if (!open) return null;
@@ -30,13 +30,13 @@ export default function MovieModal({
       <div className="MovieModal">
         <button type="button" onClick={onClose} className="MovieModal__close-button" aria-label="log out"><RiCloseCircleFill /></button>
         <div className="MovieModal__movie-details-section">
-          <img src={`https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path}`} alt={movieDetails.title} />
+          <img src={`https://image.tmdb.org/t/p/w500${details.backdrop_path}`} alt={details.title} />
           <div className="movie-details-section__movie-details-info">
             {
-              movieDetails.title ? (<h1>{movieDetails.title}</h1>) : <h1>{movieDetails.name}</h1>
+              details.title ? (<h1>{details.title}</h1>) : <h1>{details.name}</h1>
             }
 
-            <p>{movieDetails.overview}</p>
+            <p>{details.overview}</p>
           </div>
         </div>
 

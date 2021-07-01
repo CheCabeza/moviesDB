@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import moviesReducer from './moviesReducer';
-import movieDetailsReducer from './movieDetailsReducer';
-import similarMoviesReducer from './similarMoviesReducer';
+import detailsReducer from './detailsReducer';
+import similarMoviesReducer from './similarReducer';
 import tvShowsReducer from './tvShowsReducer';
 
 const rootReducer = combineReducers({
   moviesList: moviesReducer,
-  movieDetails: movieDetailsReducer,
-  similarMoviesList: similarMoviesReducer,
+  details: detailsReducer,
+  similar: similarMoviesReducer,
   tvShowsList: tvShowsReducer,
 });
 
