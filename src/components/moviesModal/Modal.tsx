@@ -2,13 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RiCloseCircleFill } from 'react-icons/ri';
 import { loadDetails, loadSimilar } from '../../redux/actions/actionCreator';
+import { AppState } from '../../redux/reducers';
 import './Modal.scss';
+
+interface IModalProps {
+  open: boolean;
+  onClose: any;
+  movieId: string;
+  type: string;
+}
+interface IProduction {
+  id: string;
+  title?: string;
+  name?: string;
+  vote_average: string;
+  poster_path: string;
+
+}
 
 export default function MovieModal({
   open, onClose, movieId, type,
-}: any) {
-  const details = useSelector((store: any) => store.details);
-  const similarMovies = useSelector((store: any) => store.similar.results);
+}: IModalProps) {
+  const details = useSelector((store: AppState) => store.details);
+  const similarMovies = useSelector((store: AppState) => store.similar.results);
   const dispatch = useDispatch();
   const [movieID, setMovieID] = useState(movieId);
 
@@ -43,7 +59,7 @@ export default function MovieModal({
         <p>Similar Movies:</p>
         <div className="MovieModal__SimilarMovies">
           {
-            similarMovies && similarMovies.slice(0, 6).map((element:any) => (
+            similarMovies && similarMovies.slice(0, 6).map((element:IProduction) => (
               <div className="similarMoviesBox">
                 <button type="button" onClick={() => { setMovieID(element.id); }}>
                   <img src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} alt={element.title} />

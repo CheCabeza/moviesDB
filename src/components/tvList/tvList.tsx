@@ -7,7 +7,7 @@ import Stars from '../stars/Stars';
 import './tvList.scss';
 
 interface ItvShow {
-  id: null;
+  id: string;
   name: string;
   vote_average: string;
   poster_path: string;
@@ -16,7 +16,7 @@ interface ItvShow {
 
 function tvList() {
   const [isOpen, setIsOpen] = useState(false);
-  const [tvShowID, settvShowId] = useState(null);
+  const [tvShowID, settvShowId] = useState('');
   const tvShows = useSelector((store: AppState) => store.tvShowsList.results);
   const dispatch = useDispatch();
   useEffect(() => {

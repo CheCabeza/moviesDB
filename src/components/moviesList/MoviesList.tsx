@@ -7,7 +7,7 @@ import Stars from '../stars/Stars';
 import './moviesList.scss';
 
 interface IMovie {
-  id: null;
+  id: string;
   title: string;
   vote_average: string;
   poster_path: string;
@@ -16,7 +16,7 @@ interface IMovie {
 
 function MoviesList() {
   const [isOpen, setIsOpen] = useState(false);
-  const [movieID, setMovieId] = useState(null);
+  const [movieID, setMovieId] = useState('');
   const movies = useSelector((store: AppState) => store.moviesList.results);
   const dispatch = useDispatch();
   useEffect(() => {
