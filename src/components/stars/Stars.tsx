@@ -66,6 +66,6 @@ export default function Stars({ votes }: any) {
         <AiFillStar />
       </>
     );
-    default: return <p>{votes}</p>;
+    default: return null;
   }
 }

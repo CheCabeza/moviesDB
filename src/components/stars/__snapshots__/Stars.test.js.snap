@@ -1162,17 +1162,9 @@ exports[`Given a Details component Should render when passing value {10} as prop
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <p>
-        10
-      </p>
-    </div>
+    <div />
   </body>,
-  "container": <div>
-    <p>
-      10
-    </p>
-  </div>,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],
