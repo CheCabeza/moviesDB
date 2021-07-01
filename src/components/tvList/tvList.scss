@@ -23,11 +23,12 @@
     border-radius: 20px;
     box-shadow: $shadow;
     background-color: $yellow;
-
+    
     button {
         border:none;
         background-color:transparent;
         outline:none;
+        cursor: pointer;
     }
 
     img {

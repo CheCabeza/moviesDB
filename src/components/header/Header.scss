@@ -22,18 +22,15 @@
     }
 }
 
-.movieIconSelected , .movieIcon {
+.movieIconSelected, .tvIconSelected {
     cursor: pointer;
-    margin-right: 30px;
-    color: black;
-    :hover {
-        color:$yellow;
-    }
+    margin: 30px;
+    color: $blue;
 }
 
-.tvIconSelected , .tvIcon {
+.tvIcon, .movieIcon {
     cursor: pointer;
-    margin-left: 30px;
+    margin: 30px;
     color: black;
     :hover {
         color:$yellow;
