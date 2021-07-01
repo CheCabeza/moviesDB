@@ -56,7 +56,7 @@ export default function MovieModal({
           </div>
         </div>
 
-        <p>Similar Movies:</p>
+        <big>Similar Movies:</big>
         <div className="MovieModal__SimilarMovies">
           {
             similarMovies && similarMovies.slice(0, 6).map((element:IProduction) => (

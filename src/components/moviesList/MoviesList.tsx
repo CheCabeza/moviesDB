@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadMovies } from '../../redux/actions/actionCreator';
 import { AppState } from '../../redux/reducers';
-import MoviesModal from '../moviesModal/Modal';
+import MoviesModal from '../modal/Modal';
 import Stars from '../stars/Stars';
 import './moviesList.scss';
 
