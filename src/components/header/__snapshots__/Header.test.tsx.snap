@@ -20,6 +20,7 @@ Object {
           href="/"
         >
           <svg
+            data-testid="ImFilm"
             fill="currentColor"
             height="3em"
             stroke="currentColor"
@@ -39,6 +40,7 @@ Object {
           href="/tvshows"
         >
           <svg
+            data-testid="ImTv"
             fill="currentColor"
             height="3em"
             stroke="currentColor"
@@ -72,6 +74,7 @@ Object {
         href="/"
       >
         <svg
+          data-testid="ImFilm"
           fill="currentColor"
           height="3em"
           stroke="currentColor"
@@ -91,6 +94,7 @@ Object {
         href="/tvshows"
       >
         <svg
+          data-testid="ImTv"
           fill="currentColor"
           height="3em"
           stroke="currentColor"

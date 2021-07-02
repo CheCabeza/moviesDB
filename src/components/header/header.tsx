@@ -13,10 +13,10 @@ export default function Header() {
       </header>
       <div>
         <Link to="/" className={movieIconColor}>
-          <ImFilm size="3em" onClick={() => { setMovieIconColor('movieIconSelected'); setTvIconColor('tvIcon'); }} />
+          <ImFilm size="3em" data-testid="ImFilm" onClick={() => { setMovieIconColor('movieIconSelected'); setTvIconColor('tvIcon'); }} />
         </Link>
         <Link to="/tvshows" className={tvIconColor}>
-          <ImTv size="3em" onClick={() => { setTvIconColor('tvIconSelected'); setMovieIconColor('movieIcon'); }} />
+          <ImTv size="3em" data-testid="ImTv" onClick={() => { setTvIconColor('tvIconSelected'); setMovieIconColor('movieIcon'); }} />
         </Link>
       </div>
     </>
