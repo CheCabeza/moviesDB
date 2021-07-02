@@ -14,15 +14,4 @@ describe('Given a Details component', () => {
     );
     expect(header).toMatchSnapshot();
   });
-
-  //   test('ImFilm should be clicked', () => {
-  //     const { getByTestId } = render(
-  //       <BrowserRouter>
-  //         <Header />
-  //       </BrowserRouter>,
-
-//     );
-//     const ImFilmButton = getByTestId('ImFilm');
-//     fireEvent.click(ImFilmButton);
-//   });
 });
