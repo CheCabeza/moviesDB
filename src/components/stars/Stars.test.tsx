@@ -8,7 +8,7 @@ describe('Given a Details component', () => {
   test('Should render when passing value {0} as props ', () => {
     const header = render(
       <BrowserRouter>
-        <Stars votes={1} />
+        <Stars votes={0} />
       </BrowserRouter>,
 
     );
